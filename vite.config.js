@@ -1,11 +1,13 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/searchMeals/" : "/",
+};
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/searchMeals/' // Thay tên repository của các bạn vào đây nhé
-    : '/'
 })
+
+
 
